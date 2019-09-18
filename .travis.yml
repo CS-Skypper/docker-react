@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t skypper/docker-react  -f Dockerfile.dev .
+
+
+scripts:
+  - docker run skypper/docker-react npm run test -- --coverage
