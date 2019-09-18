@@ -7,3 +7,7 @@ before_install:
 
 scripts:
   - docker run skypper/docker-react npm run test -- --coverage
+
+branches:
+  only:
+    - master
