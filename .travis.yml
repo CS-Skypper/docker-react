@@ -6,4 +6,4 @@ before_install:
   - docker build -t skypper/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run skypper/docker-react npm run test -- --coverage
+  - docker run -e CI=true skypper/docker-react npm run test -- --coverage
